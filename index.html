@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2d Image Transform</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+</head>
+<body class="bg-dark">
+
+<!-- text and form -->
+<div class="container w-50">
+    <div class="jumbotron">
+        <h3>2d Image Transform</h3>
+        <p>Enter your matrix below, and click the button to watch the photo transform accordingly. Click 'transform' again
+        any time you update the matrix. The 't' key can be used instead of the 'transform' button, and the 'r' key
+        instead of the 'return to normal' button.</p>
+
+
+        <form class="w-25">
+            <div class="form-row">
+                <div class="col">
+                    <input id="a" type="number" class="form-control" step=".1" value=".866">
+                </div>
+                <div class="col">
+                    <input id="b" type="number" class="form-control" step=".1" value="-.5">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input id="c" type="number" class="form-control" step=".1" value=".5">
+                </div>
+                <div class="col">
+                    <input id="d" type="number" class="form-control" pstep=".1" value=".866">
+                </div>
+            </div>
+        </form>
+
+        <form class="pt-2">
+            <button id="tranBtn" type="button" class="btn btn-primary" onclick="Transform()">Transform</button>
+            <button id="retBtn" type="button" class="btn btn-secondary" onclick="Return()" disabled>Return to Normal</button>
+        </form>
+    </div>
+</div>
+
+<!-- photo -->
+<img id="photo" alt="picture that gets transformed" src="http://www.math.utk.edu/~davidwhite/img/dog.jpeg" class="class=rounded mx-auto d-block"  style="transition: 1s ease-in-out;">
+
+<div class="pt-5"></div>
+
+<!-- footer -->
+<footer class="page-footer">
+    <div class="text-center text-light"><a class="text-light" href="">Github</a></div>
+</footer>
+
+</body>
+</html>
