@@ -9,7 +9,10 @@ function Transform() {
     c = document.getElementById("c").value;
     d = document.getElementById("d").value;
 
-    let matrixTxt = "matrix(" + a + ", " + b + ", " + c + ", " + d + ", 0, 0)"
+    b = b * -1;
+    c = c * -1;
+
+    let matrixTxt = "matrix(" + a + ", " + c + ", " + b + ", " + d + ", 0, 0)"
 
     document.getElementById("photo").style.transform = matrixTxt;
 
